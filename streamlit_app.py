@@ -30,7 +30,6 @@ my_cur.execute("insert into fruit_load_list values('from streamline')")
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ "kiwi")
-fruityvice_response_2 = requests.get("https://fruityvice.com/api/fruit/"+ "jackfruit")
 # showing info in a more friendly way
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # output in the screen as a table
