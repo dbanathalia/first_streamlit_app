@@ -29,8 +29,6 @@ streamlit.write('The user entered ', fruit_choice)
 #add_my_fruit = streamlit.text_input('What fruit would you like information about?','Jackfruit')
 #streamlit.write('The user entered ', add_my_fruit)
 
-#This will not work correctly, but jus go with it for now
-my_cur.execute("insert into fruit_load_list values('from streamline')")
 
 #import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ "kiwi")
@@ -46,3 +44,6 @@ my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
+
+#This will not work correctly, but jus go with it for now
+my_cur.execute("insert into fruit_load_list values('from streamline')")
